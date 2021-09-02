@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma CGPA Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="m-auto pb-2 pt-1">CGPA Calculator</h1>
+            <form class="m-auto col-12 pt-3" onsubmit="return cgpacalculator(this)">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">First Semister: </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="first">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Second Semister: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="second">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Third Semister: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="third">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Fourth Semister: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="fourth">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Fifth Semister: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="fifth">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Sixth Semister: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="sixth">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Seven Semister: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="seventh">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Eight Semister: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="eighth">
+                      </div>
+                  </div>
+                <button type="submit" class="btn btn-success">Get CPGA</button>
+              </form>
+              
+              <h5 class="pt-3 m-auto text-success" id="showResult"></h5>
+        </div>
+    </div>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        
+        function cgpacalculator(e){
+            let first = second = third = fourth = fifth = sixth = seventh = eighth = 0
+            first = document.querySelector('#first').value;
+            second = document.querySelector('#second').value;
+            third = document.querySelector('#third').value;
+            fourth = document.querySelector('#fourth').value;
+            fifth = document.querySelector('#fifth').value;
+            sixth = document.querySelector('#sixth').value;
+            seventh = document.querySelector('#seventh').value;
+            eighth = document.querySelector('#eighth').value;
+            //console.log(first, second, third, fourth, fifth, sixth, seventh, eighth)
+            result = (first * 5) / 100;
+            result += (second * 5) / 100;
+            result += (third * 5) / 100;
+            result += (fourth * 10) / 100;
+            result += (fifth * 15) / 100;
+            result += (sixth * 20) / 100;
+            result += (seventh * 25) / 100;
+            result += (eighth * 15) / 100;
+            document.getElementById('showResult').innerHTML = "Your CPGA is " + result;
+            return false
+        }    
+    </script>
+
+
+</body>
+</html>
